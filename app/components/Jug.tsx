@@ -18,7 +18,7 @@ export default function Jug({ capacity, current, name }: JugProps) {
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
           <span className="text-sm font-bold text-blue-800">
-            {current}/{capacity}L
+            {current}/{capacity}Л
           </span>
                 </div>
             </div>
