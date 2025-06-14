@@ -17,19 +17,19 @@ export default function useWaterJug() {
         setError(null)
 
         if (target <= 0) {
-            setError('Target must be greater than 0')
+            setError('Цільовий обʼєм має бути більшим за 0')
             return
         }
 
         if (target > Math.max(jugX, jugY)) {
-            setError(`Target cannot be larger than ${Math.max(jugX, jugY)}L`)
+            setError(`Цільовий обʼєм не може бути більшим за ${Math.max(jugX, jugY)}л`)
             return
         }
 
         const solution = solveWaterJugProblem(jugX, jugY, target)
 
         if (solution === null) {
-            setError('No solution exists for these jug sizes and target')
+            setError('Розвʼязок для даних параметрів неможливий')
             setSteps([])
         } else {
             setSteps(solution)

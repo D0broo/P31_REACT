@@ -21,7 +21,7 @@ export function solveWaterJugProblem(x: number, y: number, target: number): Step
             steps.push({
                 jugX,
                 jugY,
-                action: `Transfer ${amount}L from X to Y`
+                action: `Перелити ${amount}л з X до Y`
             })
         } else {
             const amount = Math.min(jugY, x - jugX)
@@ -30,7 +30,7 @@ export function solveWaterJugProblem(x: number, y: number, target: number): Step
             steps.push({
                 jugX,
                 jugY,
-                action: `Transfer ${amount}L from Y to X`
+                action: `Перелити ${amount}л з Y до X`
             })
         }
     }
@@ -38,10 +38,10 @@ export function solveWaterJugProblem(x: number, y: number, target: number): Step
     while (jugX !== target && jugY !== target) {
         if (jugX === 0) {
             jugX = x
-            steps.push({ jugX, jugY, action: `Fill X (${x}L)` })
+            steps.push({ jugX, jugY, action: `Наповнити X (${x}л)` })
         } else if (jugY === y) {
             jugY = 0
-            steps.push({ jugX, jugY, action: 'Empty Y' })
+            steps.push({ jugX, jugY, action: 'Спорожнити Y' })
         } else {
             transfer('X')
         }

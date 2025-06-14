@@ -31,8 +31,8 @@ export default function HomePage() {
 
           <div className="bg-white rounded-lg shadow-md p-6 mb-8">
             <div className="flex flex-col md:flex-row justify-around mb-8 gap-4">
-              <Jug capacity={jugX} current={steps[steps.length - 1]?.jugX || 0} name="Jug X" />
-              <Jug capacity={jugY} current={steps[steps.length - 1]?.jugY || 0} name="Jug Y" />
+              <Jug capacity={jugX} current={steps[steps.length - 1]?.jugX || 0} name="Ємність X" />
+              <Jug capacity={jugY} current={steps[steps.length - 1]?.jugY || 0} name="Ємність Y" />
             </div>
 
             <Controls
